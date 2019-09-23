@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/home', to: "static_pages#home"
   get '/login', to: "static_pages#home"
   get '/signup',  to: 'users#new'
+  post '/signup',  to: 'users#create'
   resources :users
 end
