@@ -9,11 +9,16 @@ module SessionsHelper
         user.remember
         cookies.permanent.signed[:user_id] = user.id
         cookies.permanent[:remember_token] = user.remember_token
-      end
+    end
+  
+  # Returns true if the given user is the current user.
+    def current_user?(user)
+      user == current_user
+    end
     
-      # Returns the user corresponding to the remember token cookie.
-      def current_user
-        return nil
+  # Returns the user corresponding to the remember token cookie.
+    def current_user
+      return nil
         if (user_id = session[:user_id])
           @current_user ||= User.find_by(id: user_id)
         elsif (user_id = cookies.signed[:user_id])
@@ -21,9 +26,9 @@ module SessionsHelper
           if user && user.authenticated?(cookies[:remember_token])
             log_in user
             @current_user = user
-          end
         end
       end
+    end
 
 
       # Returns the current logged-in user (if any).
