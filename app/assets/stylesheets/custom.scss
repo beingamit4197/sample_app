@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Open+Sans:ital,wght@0,400;1,300&family=Roboto&display=swap');
+
 $light_gray: white;
 $gray-medium-light: #eaeaea;
 
@@ -35,6 +37,7 @@ body {
     text-align: center;
     color: white;
     opacity: 0.8;
+    font-family: 'Kalam', cursive;
     }
      
   h2 {
