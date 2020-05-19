@@ -1,12 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$light_gray: #777;
+$light_gray: white;
 $gray-medium-light: #eaeaea;
 
 body {
     padding-top: 100px;
-    background-image: image-url('bg1.jpg'); 
+    background-image: image-url('bg1.jpeg'); 
     background-attachment: fixed; 
+    background-size: auto;
+    color: silver;
   }
   
   section {
@@ -19,9 +21,7 @@ body {
   
   .center {
     text-align: center;
-    h1 {
-        margin-bottom: 10px;
-    }
+   
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -33,15 +33,17 @@ body {
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
-  }
-  
+    color: white;
+    opacity: 0.8;
+    }
+     
   h2 {
     font-size: 1.2em;
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: $light_gray;
+    color: $gray-medium-light;
   }
   
   p {
@@ -60,7 +62,7 @@ body {
     padding-top: 9px;
     font-weight: bold;
     &hover {
-        color: rgb(142, 140, 146);
+        color: rgb(89, 86, 95);
         text-decoration: none;
     }
   }
@@ -73,11 +75,11 @@ footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid $gray-medium-light;
-    color: $light_gray;
+    color: whitesmoke;
     a {
-        color: $gray;
+        color: lightcoral;
         &hover {
-            color: $gray-darker;
+            color: lightskyblue;
         }
     }
     small {
@@ -159,6 +161,7 @@ aside {
   font-size: 50px;
   text-align: center;
   float: right;
+  color: cadetblue;
 }
 
 /* forms */
